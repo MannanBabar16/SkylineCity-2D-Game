@@ -27,12 +27,31 @@ public class Collectable : MonoBehaviour
 
         if (collision.gameObject.name == "Player") {
 
-            // Coins Update
-            newPlayer.coinsCollected+=1;
+            if (itemType == ItemType.Coin) {
+                // Coins Update
+                newPlayer.coinsCollected += 1;
+            }
 
+            else if (itemType == ItemType.Health) {
+
+                if (newPlayer.health < 100) {
+                    newPlayer.health += 1;
+                }
+               
+            }
+
+            else if(itemType == ItemType.Ammo) {
+
+            }
+
+            else {
+
+            }
+           
+           
             //Update Ui
             newPlayer.UpdateUI();
-          
+
 
             //gameObject.SetActive(false);                
             Destroy(gameObject);
