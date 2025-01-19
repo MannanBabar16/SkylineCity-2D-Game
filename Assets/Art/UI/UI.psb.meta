@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 4fe92c215b7a3d24d861b5c3172be7a4
+guid: 0ad07b3f78cde6944be3c9aafa96b9f7
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -21,13 +21,11 @@ ScriptedImporter:
     convertToNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
-    flipGreenChannel: 0
-    swizzle: 50462976
     isReadable: 0
     streamingMipmaps: 1
     streamingMipmapsPriority: 0
     vTOnly: 0
-    ignoreMipmapLimit: 0
+    ignoreMasterTextureLimit: 0
     nPOTScale: 1
     sRGBTexture: 1
     spriteMode: 2
@@ -90,22 +88,23 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
+    parentGroupIndex: -1
     uvTransform: {x: 0, y: 0}
     spritePosition: {x: 0, y: 0}
   mosaicSpriteImportData: []
   rigSpriteImportData:
-  - name: Health Bar
+  - name: Inventory Key
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
-    border: {x: 14, y: 9, z: 23, w: 8}
+    border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 2172
-      width: 696
-      height: 30
-    spriteID: 6f95f9443e6008949b1ac5561ae56b65
+      x: 3852
+      y: 4
+      width: 48
+      height: 48
+    spriteID: 6140d7b5c2c6ebc46b7dce762298ef94
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -113,8 +112,53 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 3, y: 2171}
-    spritePosition: {x: 132, y: 2061}
+    parentGroupIndex: -1
+    uvTransform: {x: 3852, y: 4}
+    spritePosition: {x: 3660, y: 2031}
+  - name: Inventory Blank
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3846
+      y: 54
+      width: 48
+      height: 48
+    spriteID: 0579c47507b4ae34d8e64189705f1a9c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 3851, y: 59}
+    spritePosition: {x: 3721, y: 2037}
+  - name: Health Bar
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 16, y: 7, z: 18, w: 6}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 2172
+      width: 705
+      height: 24
+    spriteID: b060b35caf0736b479a4335e5f807a8c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 2, y: 2171}
+    spritePosition: {x: 51, y: 2031}
   - name: Background
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -126,7 +170,7 @@ ScriptedImporter:
       y: 4
       width: 3840
       height: 2160
-    spriteID: d88a9d4cb6303ef4fa740e644b418d41
+    spriteID: 6a2061ff17df63f4b93a7fb0e0fa9c93
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -134,6 +178,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
+    parentGroupIndex: -1
     uvTransform: {x: 4, y: 4}
     spritePosition: {x: 0, y: 0}
   characterData:
@@ -141,7 +186,6 @@ ScriptedImporter:
     parts: []
     dimension: {x: 0, y: 0}
     characterGroups: []
-    pivot: {x: 0, y: 0}
     boneReadOnly: 0
   sharedRigSpriteImportData: []
   sharedRigCharacterData:
@@ -149,12 +193,10 @@ ScriptedImporter:
     parts: []
     dimension: {x: 0, y: 0}
     characterGroups: []
-    pivot: {x: 0, y: 0}
     boneReadOnly: 0
   platformSettings:
   - name: DefaultTexturePlatform
     overridden: 0
-    ignorePlatformSupport: 0
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -166,7 +208,6 @@ ScriptedImporter:
     androidETC2FallbackOverride: 0
   - name: Standalone
     overridden: 0
-    ignorePlatformSupport: 0
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -178,7 +219,28 @@ ScriptedImporter:
     androidETC2FallbackOverride: 0
   - name: Server
     overridden: 0
-    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Android
+    overridden: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: iPhone
+    overridden: 0
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -190,7 +252,6 @@ ScriptedImporter:
     androidETC2FallbackOverride: 0
   - name: WebGL
     overridden: 0
-    ignorePlatformSupport: 0
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -210,20 +271,40 @@ ScriptedImporter:
   paperDollMode: 0
   keepDupilcateSpriteName: 1
   skeletonAssetReferenceID: 
-  padding: 4
-  spriteSizeExpand: 0
+  pipeline: {instanceID: 0}
+  pipelineVersion: 
   spriteCategoryList:
     categories: []
   spritePackingTag: 
   resliceFromLayer: 0
   mosaicPSDLayers: []
   rigPSDLayers:
-  - name: Rectangle 1
-    spriteName: Rectangle 1
+  - name: Inventory Key
+    spriteName: Inventory Key
     isGroup: 0
     parentIndex: -1
-    spriteID: 6f95f9443e6008949b1ac5561ae56b65
+    spriteID: 6140d7b5c2c6ebc46b7dce762298ef94
+    layerID: 4
+    mosaicPosition: {x: 3852, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Inventory Blank
+    spriteName: Inventory Blank
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 0579c47507b4ae34d8e64189705f1a9c
     layerID: 3
+    mosaicPosition: {x: 3852, y: 60}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Health Bar
+    spriteName: Health Bar
+    isGroup: 0
+    parentIndex: -1
+    spriteID: b060b35caf0736b479a4335e5f807a8c
+    layerID: 2
     mosaicPosition: {x: 4, y: 2172}
     flatten: 0
     isImported: 1
@@ -232,7 +313,7 @@ ScriptedImporter:
     spriteName: Background
     isGroup: 0
     parentIndex: -1
-    spriteID: d88a9d4cb6303ef4fa740e644b418d41
+    spriteID: 6a2061ff17df63f4b93a7fb0e0fa9c93
     layerID: 1
     mosaicPosition: {x: 4, y: 4}
     flatten: 0
@@ -240,9 +321,6 @@ ScriptedImporter:
     isVisible: 1
   sharedRigPSDLayers: []
   pSDLayerImportSetting: []
-  importFileNodeState: 1
-  platformSettingsDirtyTick: 0
-  spriteSizeExpandChanged: 0
   generateGOHierarchy: 0
   textureAssetName: 
   prefabAssetName: 

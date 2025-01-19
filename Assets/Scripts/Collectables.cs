@@ -2,13 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Collectable : MonoBehaviour
+public class Collectables : MonoBehaviour
 {
-    
-    enum ItemType { Coin, Health, Ammo};
+    enum ItemType { Coin, Health, Ammo, InventoryItem};
     [SerializeField] ItemType itemType;
 
     NewPlayer newPlayer;
+
+    [SerializeField]
+    private string inventoryStringName;
+
+    [SerializeField]
+    private Sprite inventorySprite;
 
     // Start is called before the first frame update
     void Start()
@@ -22,41 +27,28 @@ public class Collectable : MonoBehaviour
         
     }
 
-
     private void OnTriggerEnter2D(Collider2D collision) {
-
         if (collision.gameObject.name == "Player") {
 
             if (itemType == ItemType.Coin) {
-                // Coins Update
                 newPlayer.coinsCollected += 1;
+
             }
-
             else if (itemType == ItemType.Health) {
-
                 if (newPlayer.health < 100) {
                     newPlayer.health += 1;
+                  
                 }
-               
-            }
 
+            }
             else if(itemType == ItemType.Ammo) {
 
+            }else if (itemType == ItemType.InventoryItem) {
+                newPlayer.AddInventoryItem(inventoryStringName, inventorySprite);
             }
 
-            else {
-
-            }
-           
-           
-            //Update Ui
-            newPlayer.UpdateUI();
-
-
-            //gameObject.SetActive(false);                
+            newPlayer.UpdateUi();
             Destroy(gameObject);
         }
     }
 }
-
-
